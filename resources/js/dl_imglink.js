@@ -1,8 +1,5 @@
 const puppeteer = require('puppeteer')
 const fs = require('fs')
-// var dirDname = 'D:/Development/emojli/memeBackend'
-// const findChrome = require(dirDname+'/node_modules/carlo/lib/find_chrome.js')
-// const findChrome = require('./node_modules/carlo/lib/find_chrome.js')
 
 const url = 'https://s.weibo.com/'
 const imgKeyword = '表情包'
@@ -15,21 +12,11 @@ var createFolder = (description) => {
     fs.writeFile(__dirname + `/imgLink.json` , description, function() {})
 }
 
-// if (process.platform === "win32") {
-//     var exePath = 'C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe';
-// }else {
-//     var exPath ='/Applications/Google Chrome.app/Contents/MacOS/Google Chrome';
-// }
 
 ;(async () => {
     
-    // let findChromePath = await findChrome({})
-    // let executablePath = findChromePath.executablePath;
-    // console.log(executablePath)
     const browser = await puppeteer.launch({
-    //     executablePath,
         headless: false,
-    //     slowMo: 100,
         
     })
     const page = await browser.newPage()
