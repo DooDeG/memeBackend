@@ -15,5 +15,12 @@
         "laravel-mix": "^5.0.1",
         "lodash": "^4.17.19",
         "resolve-url-loader": "^3.1.0"
+    },
+    "dependencies": {
+        "carlo": "^0.9.46",
+        "fs": "0.0.1-security",
+        "puppeteer": "^5.5.0",
+        "request": "^2.88.2",
+        "sprite-nest": "^0.1.0"
     }
 }
